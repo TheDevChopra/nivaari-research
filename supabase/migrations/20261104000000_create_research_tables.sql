@@ -184,13 +184,6 @@ BEGIN
         v_client_id,
         v_points_calculated
     ) RETURNING id INTO v_response_id;
-        v_participant_id,
-        v_survey_version,
-        'submitted',
-        v_started_at,
-        v_submitted_at,
-        v_client_id
-    ) RETURNING id INTO v_response_id;
 
     -- 3. Insert individual consent records
     IF v_consent IS NOT NULL THEN
